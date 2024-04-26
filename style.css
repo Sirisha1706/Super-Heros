@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(104, 102, 102);
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 2%;
+    color: white;
+}
+
+#navbar{
+    background-color: rgb(31, 30, 30);
+    height: 12%;
+    padding: 0 2%;
+    color: white;
+}
+#navbar img{
+    width: 10%;
+    height: 100%;
+}
+#navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+#search, #favorites{
+    display: flex;
+    position: absolute;
+    color: white;
+    width: 70%;
+    top: 14%;
+    justify-content: space-between;
+}
+#search input{
+    border-radius: 15px;
+    width: 50%;
+}
+
+#results, #favoriteHero{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 2%;
+    position: absolute;
+    top: 20%;
+}
+.superhero{
+    background-color: white; 
+    padding: 20px 10px;
+    width: 300px;
+    height: 350px;
+    color: black;
+    border-radius: 10px;
+}
+.superhero img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5%;
+    border-radius: 10%;
+}
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btn-box button{
+    background-color: rgb(24, 20, 20);
+    color: white;
+}
+button.favHero{
+    background-color: red !important;
+}
+#details{
+    display: flex;
+    position: absolute;
+    gap: 5%;
+    width: 100%;
+    top: 90px;
+}
+#details img{
+    width: 30%;
+    height: 200px;
+    border-radius: 20px;
+}
+#details div{
+    width: 60%;
+}
+#details-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    gap: 25px 5%;
+    position: absolute;
+    top: 320px;
+}
+#comics, #stories{
+    width: 45%;
+    background-color: white;
+    color: black;
+    padding: 3%;
+    border-radius: 20px;
+}
+#series,#events{
+    width: 45%;
+    background-color: white;
+    color: black;
+    left: 50%;
+    padding: 3%;
+    border-radius: 20px;
+}
