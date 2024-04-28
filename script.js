@@ -24,6 +24,7 @@ if(!localStorage.getItem('favHero')){
     localStorage.setItem("favHero", JSON.stringify([]));
 }
 
+// getting Information from api using asynchronus 
 searchEle.addEventListener('input', async()=>{
     const query = searchEle.value.trim();
     try{
@@ -41,6 +42,7 @@ searchEle.addEventListener('input', async()=>{
     }
 });
 
+// function to display search inputs
 function displaySuperHero(heros, showresults){
     showresults.innerHTML = '';
     let ss = JSON.parse(localStorage.getItem("favHero"));
@@ -55,6 +57,7 @@ function displaySuperHero(heros, showresults){
         const btnDiv = document.createElement('div');
         btnDiv.classList.add('btn-box');
 
+        // add favorite button
         const favBtn = document.createElement("button");
         favBtn.classList.add('btn');
         favBtn.innerHTML = '<i class="fa-regular fa-heart"></i>';
@@ -67,7 +70,8 @@ function displaySuperHero(heros, showresults){
             if (item.id == hero.id)
               favBtn.classList.add("favHero");
           }
-        
+
+        // button to get more details 
         const moreBtn = document.createElement('button');
         moreBtn.classList.add('btn');
         moreBtn.textContent = 'More Details';
@@ -85,6 +89,7 @@ function displaySuperHero(heros, showresults){
     });
 }
 
+// event listener for adding favorite elements.
 function renderFavorites(eve, hero){
     let ss = JSON.parse(localStorage.getItem('favHero'));
     if(eve.target.closest('button').classList.contains('favHero')){
@@ -99,10 +104,13 @@ function renderFavorites(eve, hero){
     }
 }
 
+// loading favorite elements to a myfavorite html page
 function loadFavorites(){
     let heros = JSON.parse(localStorage.getItem('favHero'));
     displaySuperHero(heros, favoriteDiv);
 }
+
+// event listener to get more details for a selected super hero
 function renderHeroDetails(){
     // render basic details of superhero
     const selecthero = JSON.parse(localStorage.getItem('selectedhero'));
